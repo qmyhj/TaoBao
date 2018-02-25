@@ -1,2 +1,14 @@
 # TaoBao
 Scrapy+Selenium爬取淘宝信息
+
+1 由于淘宝页面格式多样，本爬虫适用于其中一大部分页面
+
+2 由于Scrapy本身没有提供js渲染的功能，本爬虫将selenium集成到scrapy中提供js渲染
+
+3 本爬虫提供了Chrome和PhantomJS两种浏览器接口，可在settings文件中配置
+
+4 由于selenium操作浏览器爬取天猫商品详情页面时需要cookie，本爬虫采取了二维码登录淘宝的方式，爬虫启动后，本爬虫会下载相应的二维码并自动打开，只需要用手机淘宝扫一下二维码即可登录
+
+5 本爬虫采取了mysql存储方式，需要先到settings文件中配置MYSQL_PARAMS参数
+
+6 运行main.py文件即可启动爬虫
